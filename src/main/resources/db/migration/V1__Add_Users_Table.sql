@@ -1,4 +1,4 @@
-create table _user (
+create table user (
     id int primary key auto_increment not null,
     UserName varchar(255) not null,
     Email varchar(255) not null,

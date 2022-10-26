@@ -8,8 +8,7 @@ public class User {
     public String Password;
     public Boolean IsActive;
 
-    public User(int id, String userName, String email, String password, Boolean isActive) {
-        Id = id;
+    public User( String userName, String email, String password, Boolean isActive) {
         UserName = userName;
         Email = email;
         Password = password;

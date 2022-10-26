@@ -7,8 +7,16 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "_user")
+@Table(name = "user")
 public class UserModel {
+
+
+    public UserModel(String userName, String email, String password, Boolean isActive) {
+        UserName = userName;
+        Email = email;
+        Password = password;
+        IsActive = isActive;
+    }
 
 
     @Id
@@ -17,8 +25,9 @@ public class UserModel {
     @Column(name="id")
     public int Id;
 
-    @Column(name = "user_name", length = 255, nullable = false)
+    @Column(name = "userName", length = 255, nullable = false)
     public String UserName;
+
 
     @Column(name = "email", length = 255, nullable = false, unique = true)
     public String Email;
@@ -26,6 +35,6 @@ public class UserModel {
     @Column(name = "password", length = 255, nullable = false)
     public String Password;
 
-    @Column(name = "is_active", columnDefinition = "tinyint(1) default 1")
+    @Column(name = "isActive", columnDefinition = "tinyint(1) default 1")
     public Boolean IsActive;
 }
