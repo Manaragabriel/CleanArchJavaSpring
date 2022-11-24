@@ -7,7 +7,7 @@ import com.cleanArchRef.infrastructure.database.user.repositories.UserRepository
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("userService")
 public class UserService implements IUserService {
 
     @Autowired
@@ -19,4 +19,5 @@ public class UserService implements IUserService {
         newUserData.setId(userSaved.Id);
         return newUserData;
     }
+
 }

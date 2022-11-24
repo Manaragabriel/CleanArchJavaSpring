@@ -25,16 +25,16 @@ public class UserModel {
     @Column(name="id")
     public int Id;
 
-    @Column(name = "userName", length = 255, nullable = false)
+    @Column(name = "UserName", length = 255, nullable = false)
     public String UserName;
 
 
-    @Column(name = "email", length = 255, nullable = false, unique = true)
+    @Column(name = "Email", length = 255, nullable = false, unique = true)
     public String Email;
 
-    @Column(name = "password", length = 255, nullable = false)
+    @Column(name = "Password", length = 255, nullable = false)
     public String Password;
 
-    @Column(name = "isActive", columnDefinition = "tinyint(1) default 1")
+    @Column(name = "IsActive", columnDefinition = "tinyint(1) default 1")
     public Boolean IsActive;
 }
